@@ -390,7 +390,7 @@ section {
 }
 
 .hero-image {
-    background: url("../images/photo-1416339442236-8ceb164046f8.webp") no-repeat;
+    background: url("../images/hero.webp") no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     position: absolute;
