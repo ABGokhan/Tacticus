@@ -65,19 +65,6 @@
     font-style: normal;
 }
 
-/* Font Awesome */
-@font-face {
-    font-family: 'fontawesome';
-    src: url('../fonts/FontAwesome/FontAwesome.eot');
-    src: url('../fonts/FontAwesome/FontAwesome.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/FontAwesome/FontAwesome.woff2') format('woff2'),
-         url('../fonts/FontAwesome/FontAwesome.woff') format('woff'),
-         url('../fonts/FontAwesome/FontAwesome.ttf') format('truetype'),
-         url('../fonts/FontAwesome/FontAwesome.svg#fontawesome') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* CapitalisTypOasis */
 @font-face {
     font-family: 'capitalistypoasis';
