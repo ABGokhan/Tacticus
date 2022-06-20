@@ -149,7 +149,7 @@ h3 {
     margin-bottom: 1.7em;
     padding-bottom: 1.7em;
     text-align: center;
-    font-weight: bold;
+    font-weight: unset;
     text-transform: uppercase;
     color: inherit;
 }
@@ -653,7 +653,7 @@ section {
    
 .services .service-image {
     height: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 30%;
 }
    
 .services .service-image img{
