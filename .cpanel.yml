@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/suigener/repositories/Tacticus
+    - /bin/cp -R * $DEPLOYPATH
