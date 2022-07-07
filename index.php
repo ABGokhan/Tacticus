@@ -444,3 +444,5 @@ if(isset($_POST['submit'])){
   echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
   // You can also use header('Location: thank_you.php'); to redirect to another page.
   }
+
+?>
