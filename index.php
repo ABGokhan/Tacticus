@@ -395,7 +395,7 @@
       </ul>
     </div>
     <div class="eight columns contact-us-form">
-      <form action="sentMail.php" method="post">
+      <form id="contact" action="" method="post">
         <div class="row">
           <div class="six columns">
             <input class="u-full-width" type="text" placeholder="Name" id="nameInput">
