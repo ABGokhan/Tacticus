@@ -429,7 +429,7 @@ echo "<!DOCTYPE html>
 ";
 
 if(isset($_POST['submit'])){
-  $to = "abgokhan@abgokhan.com"; // this is your Email address
+  $to = "abgokhan@tacticus.digital"; // this is your Email address
   $from = $_POST['emailInput']; // this is the sender's Email address
   $name = $_POST['nameInput'];
   $subject = "Form submission";
