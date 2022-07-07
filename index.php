@@ -398,19 +398,19 @@
       <form id="contact" action="" method="post">
         <div class="row">
           <div class="six columns">
-            <input class="u-full-width" type="text" placeholder="Name" id="nameInput">
+            <input class="u-full-width" type="text" placeholder="Name" name="nameInput">
           </div>
           <div class="six columns">
-            <input class="u-full-width" type="email" placeholder="Email" id="emailInput">
+            <input class="u-full-width" type="email" placeholder="Email" name="emailInput">
           </div>
         </div>
-        <input class="u-full-width" type="text" placeholder="Subject" id="subjectInput">
-        <textarea class="u-full-width" placeholder="Message" id="messageInput"></textarea>
+        <input class="u-full-width" type="text" placeholder="Subject" name="subjectInput">
+        <textarea class="u-full-width" placeholder="Message" name="messageInput"></textarea>
         <div>
           <p class="success"> <?php echo $success;  ?></p>
           <p class="failed"> <?php echo $failed;  ?></p>
         </div>
-        <input class="button u-pull-right" type="submit" value="Submit" id="submit" >
+        <input class="button u-pull-right" type="submit" value="Submit" name="submit" >
       </form>
     </div>
   </div>
