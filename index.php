@@ -410,7 +410,7 @@
           <p class="success"> <?php echo $success;  ?></p>
           <p class="failed"> <?php echo $failed;  ?></p>
         </div>
-        <input class="button u-pull-right" type="submit" value="Send" id="submit">
+        <input class="button u-pull-right" type="submit" value="Submit" id="submit" >
       </form>
     </div>
   </div>
