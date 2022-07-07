@@ -3,20 +3,20 @@
 if(isset($_POST['submit'])) {
   $mailto = "abgokhan@tacticus.digital";  //My email address
   //getting customer data
-  $name = $_POST['nameInput']; //getting customer name
-  $fromEmail = $_POST['emailInput']; //getting customer email
-  $subject = $_POST['subjectInput']; //getting subject line from client
+  $name = $_POST['name']; //getting customer name
+  $fromEmail = $_POST['email']; //getting customer email
+  $subject = $_POST['subject']; //getting subject line from client
   $subject2 = "Confirmation: Message was submitted successfully | tacticus.digital"; // For customer confirmation
   
   //Email body I will receive
   $message = "Cleint Name: " . $name . "\n"
-  . "Client Message: " . "\n" . $_POST['messageInput'];
+  . "Client Message: " . "\n" . $_POST['message'];
   
   //Message for client confirmation
   $message2 = "Dear" . $name . "\n"
   . "Thank you for contacting us. We will get back to you shortly!" . "\n\n"
-  . "You submitted the following message: " . "\n" . $_POST['messageInput'] . "\n\n"
-  . "Regards," . "\n" . "- HMA WebDesign";
+  . "You submitted the following message: " . "\n" . $_POST['message'] . "\n\n"
+  . "Regards," . "\n" . "- tacticus.digital";
   
   //Email headers
   $headers = "From: " . $fromEmail; // Client email, I will receive

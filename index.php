@@ -398,14 +398,14 @@
       <form id="contact" action="" method="post">
         <div class="row">
           <div class="six columns">
-            <input class="u-full-width" type="text" placeholder="Name" name="nameInput">
+            <input class="u-full-width" type="text" placeholder="Name" name="name">
           </div>
           <div class="six columns">
-            <input class="u-full-width" type="email" placeholder="Email" name="emailInput">
+            <input class="u-full-width" type="email" placeholder="Email" name="email">
           </div>
         </div>
-        <input class="u-full-width" type="text" placeholder="Subject" name="subjectInput">
-        <textarea class="u-full-width" placeholder="Message" name="messageInput"></textarea>
+        <input class="u-full-width" type="text" placeholder="Subject" name="subject">
+        <textarea class="u-full-width" placeholder="Message" name="message"></textarea>
         <div>
           <p class="success"> <?php echo $success;  ?></p>
           <p class="failed"> <?php echo $failed;  ?></p>
