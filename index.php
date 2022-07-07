@@ -406,6 +406,10 @@
         </div>
         <input class="u-full-width" type="text" placeholder="Subject" id="subjectInput">
         <textarea class="u-full-width" placeholder="Message" id="messageInput"></textarea>
+        <div>
+          <p class="success"> <?php echo $success;  ?></p>
+          <p class="failed"> <?php echo $failed;  ?></p>
+        </div>
         <input class="button u-pull-right" type="submit" value="Send" id="submit">
       </form>
     </div>
