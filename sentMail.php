@@ -1,7 +1,7 @@
 <?php 
 ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
 include('Mail.php');
-include('Mail/mime.php');
+include('Mail_Mime.php');
 
 $from = "info@tacticus.digital"; //getting customer email
 $to = $_POST['email'] ;  //My email address
@@ -17,7 +17,7 @@ $html = 'Hi there, we are happy to <br>confirm your booking.</br> Please check t
 //add  attachment
 $file = '/documents/ebook.pdf';
 
-$mime = new Mail_mime();
+$mime = new Mail_Mime();
 $mime->setTXTBody($text);
 $mime->setHTMLBody($html);
 $mime->addAttachment($file, 'text/plain');
