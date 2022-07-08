@@ -1,5 +1,5 @@
 <?php 
-require_once "Mail.php";
+include('Mail.php');
 
 if(isset($_POST['submit'])) {
   $mailto = "abgokhan@tacticus.digital";  //My email address
