@@ -1,3 +1,5 @@
+<?php ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") ); ?>
+<?php include('Mail.php'); ?>
 <?php include 'sentMail.php';?>
 
 <!DOCTYPE html>
