@@ -1,4 +1,5 @@
 <?php 
+include('Mail.php');
 
 if(isset($_POST['submit'])) {
   $mailto = "abgokhan@tacticus.digital";  //My email address
@@ -49,7 +50,7 @@ if(isset($_POST['submit'])) {
     $success = "Your Message was sent Successfully!";
 
   } else {
-    
+
     $failed = "Sorry! Message was not sent, Try again Later.";
   }
   
