@@ -1,4 +1,5 @@
 <?php 
+ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
 include('Mail.php');
 
 if(isset($_POST['submit'])) {
