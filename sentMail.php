@@ -22,10 +22,25 @@ if(isset($_POST['submit'])) {
   $headers = "From: " . $fromEmail; // Client email, I will receive
   $headers2 = "From: " . $mailto; // This will receive client
   
+  //STMP Setttings
+
+  $host = 'mail.tacticus.digital';
+  $username = 'info@tacticus.digital'; // username from email provider
+  $password = 'B4400.879g'; // password for the email
+  $port = '465';
+  
+  $smtp = Mail::factory('smtp', [
+    'host' => $host,
+    'auth' => true,
+    'username' => $username,
+    'password' => $password,
+    'port' => $port
+  ]);
+
   //PHP mailer function
   
-  $result1 = mail($mailto, $subject, $message, $headers); // This email sent to My address
-  $result2 = mail($fromEmail, $subject2, $message2, $headers2); //This confirmation email to client
+  $result1 = $smtp->send($mailto, $subject, $message, $headers); // This email sent to My address
+  $result2 = $smtp->send($fromEmail, $subject2, $message2, $headers2); //This confirmation email to client
   
   //Checking if Mails sent successfully
   
