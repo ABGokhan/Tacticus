@@ -48,10 +48,10 @@ if(isset($_POST['submit'])) {
 
     $success = "Your Message was sent Successfully!";
 
-} else {
+  } else {
     
     $failed = "Sorry! Message was not sent, Try again Later.";
-}
+  }
   
 }
 
