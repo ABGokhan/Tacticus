@@ -11,8 +11,8 @@ $name = $_POST['name']; //getting customer name
 $headers = ['From' => $from,'To' => $to, 'Subject' => $subject];
 
 // include text and HTML versions
-$text = $_POST['message'];
-$html = $_POST['message'];
+$text = $name . "<br>" . $_POST['message'];
+$html = $name . "<br>" . $_POST['message'];
 
 //add  attachment
 $file = '/documents/ebook.pdf';
