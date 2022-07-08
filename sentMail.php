@@ -1,7 +1,7 @@
 <?php 
 ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
-include('Mail.php');
-include('Mail/mime.php');
+require_once "Mail.php";
+require_once "Mail/mime.php";
 
 $from = "info@tacticus.digital"; //getting customer email
 $to = $_POST['email'] ;  //My email address
