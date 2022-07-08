@@ -11,8 +11,8 @@ $name = $_POST['name']; //getting customer name
 $headers = ['From' => $from,'To' => $to, 'Subject' => $subject];
 
 // include text and HTML versions
-$text = 'Hi there, we are happy to confirm your request. Please check the ebook in the attachment.';
-$html = 'Hi there, we are happy to <br>confirm your booking.</br> Please check the ebook in the attachment.';
+$text = $_POST['message'];
+$html = $_POST['message'];
 
 //add  attachment
 $file = '/documents/ebook.pdf';
