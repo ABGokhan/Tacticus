@@ -2,59 +2,53 @@
 ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
 include('Mail.php');
 
-if(isset($_POST['submit'])) {
-  $mailto = "info@tacticus.digital";  //My email address
-  //getting customer data
-  $name = $_POST['name']; //getting customer name
-  $fromEmail = $_POST['email']; //getting customer email
-  $subject = $_POST['subject']; //getting subject line from client
-  $subject2 = "Confirmation: Message was submitted successfully | tacticus.digital"; // For customer confirmation
-  
-  //Email body I will receive
-  $message = "Cleint Name: " . $name . "\n"
-  . "Client Message: " . "\n" . $_POST['message'];
-  
-  //Message for client confirmation
-  $message2 = "Dear" . $name . "\n"
-  . "Thank you for contacting us. We will get back to you shortly!" . "\n\n"
-  . "You submitted the following message: " . "\n" . $_POST['message'] . "\n\n"
-  . "Regards," . "\n" . "- tacticus.digital";
-  
-  //Email headers
-  $headers = "From: " . $fromEmail; // Client email, I will receive
-  $headers2 = "From: " . $mailto; // This will receive client
-  
-  //STMP Setttings
 
-  $host = 'mail.tacticus.digital';
-  $username = 'info@tacticus.digital'; // username from email provider
-  $password = 'B4400.879g'; // password for the email
-  $port = '465';
-  
-  $smtp = Mail::factory('smtp', [
-    'host' => $host,
-    'auth' => true,
-    'username' => $username,
-    'password' => $password,
-    'port' => $port
-  ]);
+$mailto = "info@tacticus.digital";  //My email address
+//getting customer data
+$name = $_POST['name']; //getting customer name
+$fromEmail = $_POST['email']; //getting customer email
+$subject = $_POST['subject']; //getting subject line from client
+$subject2 = "Confirmation: Message was submitted successfully | tacticus.digital"; // For customer confirmation 
 
-  //PHP mailer function
-  
-  $result1 = $smtp->send($mailto, $subject, $message, $headers); // This email sent to My address
-  $result2 = $smtp->send($fromEmail, $subject2, $message2, $headers2); //This confirmation email to client
-  
-  //Checking if Mails sent successfully
-  
-  if ($result1 && $result2) {
+//Email body I will receive
+$message = "Cleint Name: " . $name . "\n"
+. "Client Message: " . "\n" . $_POST['message'];
 
-    $success = "Your Message was sent Successfully!";
+//Message for client confirmation
+$message2 = "Dear" . $name . "\n"
+. "Thank you for contacting us. We will get back to you shortly!" . "\n\n"
+. "You submitted the following message: " . "\n" . $_POST['message'] . "\n\n"
+. "Regards," . "\n" . "- tacticus.digital"; 
 
-  } else {
+//Email headers
+$headers = "From: " . $fromEmail; // Client email, I will receive
+$headers2 = "From: " . $mailto; // This will receive client 
 
-    $failed = "Sorry! Message was not sent, Try again Later.";
-  }
-  
+//STMP Setttings
+$host = 'ssl://mail.tacticus.digital';
+$username = 'info@tacticus.digital'; // username from email provider
+$password = 'B4400.879g'; // password for the email
+$port = '465';
+ 
+$smtp = Mail::factory('smtp', [
+  'host' => $host,
+  'auth' => true,
+  'username' => $username,
+  'password' => $password,
+  'port' => $port
+]);
+
+//PHP mailer function
+ 
+$result1 = $smtp->send($mailto, $subject, $message, $headers); // This email sent to My address
+$result2 = $smtp->send($fromEmail, $subject2, $message2, $headers2); //This confirmation email to client  
+
+//Checking if Mails sent successfully
+
+if (PEAR::isError($result1)) {
+  echo('<p>' . $result1->getMessage() . '</p>');
+} else {
+  echo('<p>Message successfully sent!</p>');
 }
 
 ?>
