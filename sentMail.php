@@ -2,7 +2,7 @@
 include('Mail.php');
 
 if(isset($_POST['submit'])) {
-  $mailto = "abgokhan@tacticus.digital";  //My email address
+  $mailto = "info@tacticus.digital";  //My email address
   //getting customer data
   $name = $_POST['name']; //getting customer name
   $fromEmail = $_POST['email']; //getting customer email
