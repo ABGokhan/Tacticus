@@ -3,8 +3,8 @@ ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
 require_once "Mail.php";
 require_once "Mail/mime.php";
 
-$from = "info@tacticus.digital"; //getting customer email
-$to = $_POST['email'] ;  //My email address
+$from = $_POST['email']; //getting customer email
+$to = "abgokhan@tacticus.digital";  //My email address
 $subject = $_POST['subject']; //getting subject line from client
 $name = $_POST['name']; //getting customer name
 
