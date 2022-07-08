@@ -1,35 +1,36 @@
 <?php 
 ini_set("include_path", '/home/suigener/php:' . ini_get("include_path") );
 include('Mail.php');
+require_once './vendor/autoload.php';
 
-
-$mailto = "info@tacticus.digital";  //My email address
-//getting customer data
-$name = $_POST['name']; //getting customer name
-$fromEmail = $_POST['email']; //getting customer email
+$from = "info@tacticus.digital"; //getting customer email
+$to = $_POST['email'] ;  //My email address
 $subject = $_POST['subject']; //getting subject line from client
-$subject2 = "Confirmation: Message was submitted successfully | tacticus.digital"; // For customer confirmation 
+$name = $_POST['name']; //getting customer name
 
-//Email body I will receive
-$message = "Cleint Name: " . $name . "\n"
-. "Client Message: " . "\n" . $_POST['message'];
+$headers = ['From' => $from,'To' => $to, 'Subject' => $subject];
 
-//Message for client confirmation
-$message2 = "Dear" . $name . "\n"
-. "Thank you for contacting us. We will get back to you shortly!" . "\n\n"
-. "You submitted the following message: " . "\n" . $_POST['message'] . "\n\n"
-. "Regards," . "\n" . "- tacticus.digital"; 
+// include text and HTML versions
+$text = 'Hi there, we are happy to confirm your request. Please check the ebook in the attachment.';
+$html = 'Hi there, we are happy to <br>confirm your booking.</br> Please check the ebook in the attachment.';
 
-//Email headers
-$headers = "From: " . $fromEmail; // Client email, I will receive
-$headers2 = "From: " . $mailto; // This will receive client 
+//add  attachment
+$file = '/documents/ebook.pdf';
+
+$mime = new Mail_mime();
+$mime->setTXTBody($text);
+$mime->setHTMLBody($html);
+$mime->addAttachment($file, 'text/plain');
+
+$body = $mime->get();
+$headers = $mime->headers($headers);
 
 //STMP Setttings
 $host = 'ssl://mail.tacticus.digital';
 $username = 'info@tacticus.digital'; // username from email provider
 $password = 'B4400.879g'; // password for the email
 $port = '465';
- 
+
 $smtp = Mail::factory('smtp', [
   'host' => $host,
   'auth' => true,
@@ -38,17 +39,12 @@ $smtp = Mail::factory('smtp', [
   'port' => $port
 ]);
 
-//PHP mailer function
- 
-$result1 = $smtp->send($mailto, $subject, $message, $headers); // This email sent to My address
-$result2 = $smtp->send($fromEmail, $subject2, $message2, $headers2); //This confirmation email to client  
+$mail = $smtp->send($to, $headers, $body);
 
-//Checking if Mails sent successfully
-
-if (PEAR::isError($result1)) {
-  echo('<p>' . $result1->getMessage() . '</p>');
+if (PEAR::isError($mail)) {
+    echo('<p>' . $mail->getMessage() . '</p>');
 } else {
-  echo('<p>Message successfully sent!</p>');
+    echo('<p>Message successfully sent!</p>');
 }
 
 ?>
