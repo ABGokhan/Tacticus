@@ -368,7 +368,6 @@
       <h5>
       Send message on WhatsApp by  <br />
       +90 554 998 48 30<br />
-      or send email to abgokhan@tacticus.digital <br />
       or fill the form.<br />
       </h5>
       <ul class="social-links">
