@@ -15,12 +15,13 @@ $text = $name . "<br>" . $_POST['message'];
 $html = $name . "<br>" . $_POST['message'];
 
 //add  attachment
-$file = '/documents/ebook.pdf';
+// $file = '/documents/ebook.pdf';
 
 $mime = new Mail_mime();
 $mime->setTXTBody($text);
 $mime->setHTMLBody($html);
-$mime->addAttachment($file, 'text/plain');
+
+// $mime->addAttachment($file, 'text/plain');
 
 $body = $mime->get();
 $headers = $mime->headers($headers);
