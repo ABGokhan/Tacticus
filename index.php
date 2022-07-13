@@ -46,7 +46,7 @@
   <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
   <script type="text/javascript" src="js/scrollreveal.js"></script>
   <script type="text/javascript" src="js/singlenav.js"></script>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
   <!-- Favicon
