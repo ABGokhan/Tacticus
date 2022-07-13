@@ -42,11 +42,11 @@
 
   <!-- Javascript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.2.1.3.min.js"></script>
   <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-  <script type="text/javascript" src="js/scrollreveal.min.js"></script>
-  <script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
-  <script type="text/javascript" src="js/fancybox.umd.js"></script>
+  <script type="text/javascript" src="js/scrollreveal.js"></script>
+  <script type="text/javascript" src="js/singlenav.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
   <!-- Favicon
