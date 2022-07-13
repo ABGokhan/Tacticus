@@ -154,7 +154,7 @@
       </div>
       <div class="row">
         <!-- work items -->
-        <ul class="work-items u-cf">
+        <ul class="work-items isotope js-isotope u-cf">
           <li class="four columns">
             <img src="images/portfolio/port1.svg">
             <div class="work-detail">
