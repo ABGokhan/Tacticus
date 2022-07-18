@@ -372,22 +372,22 @@
       </h5>
       <ul class="social-links">
         <li>
-          <a href="http://twitter.com/abgoekhan" target="_blank">
+          <a href="https://twitter.com/tacticusdigital" target="_blank">
             <i class="fa fa-twitter"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/burakthedude" target="_blank">
+          <a href="https://www.facebook.com/tacticus.digital" target="_blank">
             <i class="fa fa-facebook"></i>
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/buraklebowski" target="_blank">
+          <a href="https://www.instagram.com/tacticusdigital/" target="_blank">
             <i class="fa fa-instagram"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/abgokhan/" target="_blank">
+          <a href="https://linkedin.com/company/tacticus-digital/" target="_blank">
             <i class="fa fa-linkedin"></i>
           </a>
         </li>
